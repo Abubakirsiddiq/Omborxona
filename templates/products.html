@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Products</title>
+  <title>Mahsulotlar</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback' %}">
@@ -41,7 +41,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/user/login/" class="nav-link">Home</a>
+        <a href="/asosiy/bolim/" class="nav-link active">Bo'limga Qaytish</a>
       </li>
     </ul>
 
@@ -76,23 +76,23 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-header">Menu</li>
+          <li class="nav-header">Menyu</li>
           <li class="nav-item">
             <a href="/stats/" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Statistics</p>
+              <p>Statistika</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="/asosiy/client/" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Clients</p>
+              <p class="text">Mijozlar</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="/asosiy/mahsulotlar/" class="nav-link active">
               <i class="nav-icon far fa-circle text-info"></i>
-              <p>Products</p>
+              <p>Mahsulotlar</p>
             </a>
           </li>
         </ul>
@@ -109,14 +109,14 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Products</h1>
+            <h1 class="m-0">Mahsulotlar</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/asosiy/bolim/">Home</a></li>
-              <li class="breadcrumb-item active"><a href="/asosiy/client/">Clients</a></li>
-              <li class="breadcrumb-item active"><a href="/stats/">Statistics</a></li>
-                <li class="breadcrumb-item"><a href="/user/logout/">Logout</a></li>
+              <li class="breadcrumb-item"><a href="/asosiy/bolim/">Bo'limga Qaytish</a></li>
+              <li class="breadcrumb-item active"><a href="/asosiy/client/">Mijozlar</a></li>
+              <li class="breadcrumb-item active"><a href="/stats/">Statistika</a></li>
+                <li class="breadcrumb-item"><a href="/user/logout/">Loginga Qaytish</a></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -135,11 +135,11 @@
                     <thead>
                         <tr>
                             <th scope="col" style="width: 15px">T/r</th>
-                            <th scope="col" style="width: 255px; text-align: center;">Nomi</th>
-                            <th scope="col" style="text-align: center;">Brendi</th>
-                            <th scope="col" style="text-align: center;">Kelgan Narxi</th>
-                            <th scope="col" style="text-align: center;">Sotuv Narxi</th>
-                            <th scope="col" style="text-align: center;">Miqdori</th>
+                            <th scope="col" style="width: 255px; text-align: center;">Nom</th>
+                            <th scope="col" style="text-align: center;">Brend</th>
+                            <th scope="col" style="text-align: center;">Kelgan Narx</th>
+                            <th scope="col" style="text-align: center;">Sotuv Narx</th>
+                            <th scope="col" style="text-align: center;">Miqdor</th>
                             <th scope="col" style="text-align: center;"></th>
                         </tr>
                     </thead>
@@ -175,19 +175,19 @@
           <!-- Modal body -->
           <form method="post" action="/asosiy/mahsulotlar/" id="new-product-form" >{% csrf_token %}
             <div class="modal-body">
-              <label for="new-product-name">Nomi:</label>
+              <label for="new-product-name">Nom:</label>
               <input type="text" name="pr_name" placeholder="Mahsulot nomi..." id="new-product-name" class="form-control" required>
               <br>
               <label for="new-product-name">Brend:</label>
               <input type="text" name="pr_brand" placeholder="Mahsulot brendi..." id="new-product-brend" class="form-control" required>
               <br>
-              <label for="new-product-name">Kelgan Narxi:</label>
+              <label for="new-product-name">Kelgan Narx:</label>
               <input type="number" name="pr_price1" placeholder="Maxsulot kelgan narxi..." id="new-product-price1" class="form-control" required>
               <br>
-                <label for="new-product-name">Sotuv Narxi:</label>
+                <label for="new-product-name">Sotuv Narx:</label>
               <input type="number" name="pr_price2" placeholder="Maxsulot sotuv narxi..." id="new-product-price2" class="form-control" required>
               <br>
-              <label for="new-product-name">Miqdori:</label>
+              <label for="new-product-name">Miqdor:</label>
               <input type="number" name="pr_amount" placeholder="Mahsulot miqdori..." id="new-product-amount" class="form-control" required>
               <br>
             </div>

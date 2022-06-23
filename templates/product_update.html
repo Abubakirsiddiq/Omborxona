@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Products</title>
+  <title>Mahsulot</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback' %}">
@@ -38,13 +38,15 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Products</h1>
+            <h1 class="m-0">Mahsulot</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{% url 'login' %}">Home</a></li>
-              <li class="breadcrumb-item active"><a href="{% url 'mahsulotlar' %}">Products</a></li>
-              <li class="breadcrumb-item"><a href="{% url 'logout' %}">Logout</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'bolim' %}">Bo'limga Qaytish</a></li>
+              <li class="breadcrumb-item active"><a href="{% url 'mahsulotlar' %}">Mahsulotlar</a></li>
+              <li class="breadcrumb-item active"><a href="{% url 'client' %}">Mijozlar</a></li>
+              <li class="breadcrumb-item active"><a href="{% url 'stats' %}">Statistika</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'logout' %}">Loginga Qaytish</a></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -57,19 +59,19 @@
 
           <!-- Modal body -->
           <form method="post" action="/asosiy/m_edit/{{m.id}}/" id="edit-product-form">{% csrf_token %}
-              <label for="edit-product-name">Mahsulot nomi:</label>
+              <label for="edit-product-name">Nom:</label>
               <input type="text" name="nom" value="{{m.nom}}" placeholder="Mahsulot nomi..." id="edit-product-name" class="form-control" required>
                 <br>
-              <label for="edit-product-name">Brend nomi:</label>
+              <label for="edit-product-name">Brend:</label>
               <input type="text" name="b" value="{{m.brend}}" placeholder="Brend nomi..." id="edit-product-brend" class="form-control" required>
               <br>
-              <label for="edit-product-name">Mahsulot narxi:</label>
+              <label for="edit-product-name">Kelgan narx:</label>
               <input type="number" name="k_n" value="{{m.kelgan_narx}}" placeholder="Mahsulot narxi..." id="edit-product-price" class="form-control" required>
               <br>
-              <label for="edit-product-name">Mahsulot narxi:</label>
+              <label for="edit-product-name">Sotuv narx:</label>
               <input type="number" name="s_n" value="{{m.sotuv_narx}}" placeholder="Mahsulot narxi..." id="edit-product-price2" class="form-control" required>
               <br>
-              <label for="edit-product-name">Dona qoldi:</label>
+              <label for="edit-product-name">Miqdor:</label>
               <input type="number" name="m" value="{{m.miqdor}}" placeholder="Dona qoldi..." id="edit-product-amount" class="form-control" required>
               <br>
 

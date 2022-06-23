@@ -61,7 +61,7 @@ class StatsEdit(View):
 
     def post(self, request, pk):
         Stats.objects.filter(id=pk).update(
-            sana=request.POST.get("s"),
+            sana=request.POST.get("v"),
             miqdor = request.POST.get("m"),
             umumiy = request.POST.get("u"),
             tolandi = request.POST.get("t"),

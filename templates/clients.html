@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Clients</title>
+  <title>Mijozlar</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback' %}">
@@ -38,7 +38,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/asosiy/bolim/" class="nav-link">Home</a>
+        <a href="/asosiy/bolim/" class="nav-link active">Bo'limga Qaytish</a>
       </li>
     </ul>
 
@@ -73,23 +73,23 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-header">Menu</li>
+          <li class="nav-header">Menyu</li>
           <li class="nav-item">
             <a href="/stats/" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Statistics</p>
+              <p>Statistika</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="/asosiy/client/" class="nav-link active">
               <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Clients</p>
+              <p class="text">Mijozlar</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="/asosiy/mahsulotlar/" class="nav-link">
               <i class="nav-icon far fa-circle text-info"></i>
-              <p>Products</p>
+              <p>Mahsulotlar</p>
             </a>
           </li>
         </ul>
@@ -106,14 +106,14 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Clients</h1>
+            <h1 class="m-0">Mijozlar</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-             <li class="breadcrumb-item"><a href="/asosiy/bolim/">Home</a></li>
-              <li class="breadcrumb-item active"><a href="/asosiy/mahsulotlar/">Products</a></li>
-               <li class="breadcrumb-item active"><a href="/stats/">Statistics</a></li>
-              <li class="breadcrumb-item"><a href="/user/logout/">Logout</a></li>
+             <li class="breadcrumb-item"><a href="/asosiy/bolim/">Bo'limga Qytish</a></li>
+              <li class="breadcrumb-item active"><a href="/asosiy/mahsulotlar/">Mahsulotlar</a></li>
+               <li class="breadcrumb-item active"><a href="/stats/">Statistika</a></li>
+              <li class="breadcrumb-item"><a href="/user/logout/">Loginga Qaytish</a></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -134,9 +134,9 @@
                             <th scope="col" style="width: 15px">T/r</th>
                             <th scope="col" style="width: 255px; text-align: center;">FIO</th>
                             <th scope="col" style="text-align: center;">Do'kon nomi</th>
-                            <th scope="col" style="text-align: center;">Telefon raqami</th>
-                            <th scope="col" style="text-align: center;">Manzili</th>
-                            <th scope="col" style="text-align: center;"></th>
+                            <th scope="col" style="text-align: center;">Telefon raqam</th>
+                            <th scope="col" style="text-align: center;">Manzil</th>
+                            <th scope="col" style="text-align: center;">Qarz</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -176,10 +176,10 @@
               <label for="new-product-name">Do'kon nomi: </label>
               <input type="text" name="client_shop" placeholder="Do'kon nomi..." id="new-product-brend" class="form-control" required>
               <br>
-              <label for="new-product-name">Telefon raqami: </label>
+              <label for="new-product-name">Telefon raqam: </label>
               <input type="text" name="client_phone" placeholder="Telefon raqami..." id="new-product-price" class="form-control" required>
               <br>
-              <label for="new-product-name">Manzili: </label>
+              <label for="new-product-name">Manzil: </label>
               <input type="text" name="client_address" placeholder="Mijoz manzili..." id="new-product-amount" class="form-control" required>
               <br>
               <label for="new-product-name">Qarz: </label>
